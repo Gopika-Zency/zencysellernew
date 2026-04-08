@@ -1,0 +1,336 @@
+/* Common Elements Css @S */
+/* variables */
+:root {
+  /* color variables */
+  --primary-color: #18063c;
+  --secondary-color: #79088f;
+
+  /* font family variables */
+  --primary-font: "Plus Jakarta Sans", sans-serif;
+  --secondary-font: "Space Grotesk", sans-serif;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-weight: 400;
+  color: #000;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.container {
+  max-width: 1327px;
+  width: 100%;
+}
+
+.btn {
+  padding: 15px 30px;
+  font-family: var(--secondary-font);
+  font-size: 20px;
+  line-height: 1;
+  border-radius: 40px;
+  height: 50px;
+  font-weight: 700;
+}
+
+.btn-primary {
+  background-color: #9077ff;
+  color: #fff;
+  border-color: #9077ff;
+}
+
+.btn-primary:hover {
+  background-color: #7b5efd;
+  border-color: #7b5efd;
+}
+
+/* Common Elements Css @E */
+
+/* Header Css @S */
+.header {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+}
+
+.header .navbar {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.04);
+  padding: 15px 0;
+}
+
+.header .nav-link {
+  font-weight: 500;
+  font-family: var(--secondary-font);
+  font-size: 18px;
+  margin-right: 40px;
+}
+
+.header .nav-link:hover {
+  color: var(--secondary-color);
+}
+
+/* Header Css @E */
+
+/* Banner Section Start */
+.bannerSec {
+  padding: 180px 0 130px;
+}
+
+.bannerSec_top::after {
+  content: "";
+  background: url("../images/banner/banner-right-orange.webp") center/100% no-repeat;
+  position: absolute;
+  right: 0;
+  top: -18%;
+  width: 444px;
+  height: 100%;
+  z-index: -1;
+}
+
+.bannerSec_top::before {
+  content: "";
+  background: url("../images/banner/banner-left-pink.webp") right/100% no-repeat;
+  position: absolute;
+  left: 0;
+  top: -18%;
+  width: 700px;
+  height: 100%;
+  z-index: -1;
+}
+
+.bannerSec::after {
+  content: "";
+  content: "";
+  background: url("../images/banner//banner-right-green.webp") right / contain no-repeat;
+  position: absolute;
+  right: 0;
+  bottom: -51%;
+  width: 700px;
+  height: 100%;
+  z-index: -1;
+}
+
+.bannerSec::before {
+  content: "";
+  background: url("../images/banner/banner-left-lg-pink.webp") left/100% no-repeat;
+  position: absolute;
+  left: 0;
+  bottom: -34%;
+  width: 1200px;
+  height: 100%;
+  z-index: -1;
+}
+
+.bannerSec_top_title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.bannerSec_top_title .logo::before {
+  content: "";
+  background: url("../images/banner/banner-circle-img.svg") left/contain no-repeat;
+  position: absolute;
+  width: 430px;
+  left: -12px;
+  top: -17px;
+  height: 146px;
+  z-index: -1;
+}
+
+.bannerSec_top_title .logo span {
+  font-size: 85px;
+  line-height: 0;
+}
+
+.bannerSec_desc {
+  font-size: 35px;
+  line-height: 1.2;
+  margin: 44px 0;
+}
+
+.bannerSec_bottom {
+  padding-top: 110px;
+}
+
+.bannerSec_bottom_title {
+  font-size: 20px;
+  color: var(--secondary-color);
+}
+
+/* Banner Section End */
+
+/* Why Choose Us CSS Start */
+.why-choose-us h2 {
+  font-size: 2.5rem;
+  color: #2d0c4a;
+  margin-bottom: 40px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /* grid-template-columns: 33% 33% 33%; */
+  gap: 20px;
+}
+
+.feature-card {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  /* align-items: center; */
+  transition: transform 0.3s ease;
+  gap: 20px;
+  width: 18rem;
+  ;
+  justify-content: center;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  background: #2d0c4a;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.feature-text {
+  background: #f1e4ff;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: left;
+  font-weight: 700;
+  color: #2d0c4a;
+  font-size: 1rem;
+  width: 160px;
+}
+
+/* Why Choose Us CSS End */
+
+/* Selling Section CSS Start  */
+.selling-steps {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.selling-steps h2 {
+  font-size: 2.5rem;
+  color: #2d0c4a;
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+.selling-steps h2 span {
+  font-weight: 700;
+  color: #2d0c4a;
+}
+
+.steps-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.step {
+  width: 180px;
+  text-align: center;
+}
+
+.number {
+  font-size: 4rem;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.step h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #2d0c4a;
+}
+
+.step p {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.arrow {
+  font-size: 3rem;
+  color: #8e2de2;
+  transform: rotate(-30deg);
+  width: 111px;
+}
+
+.arrow img {
+  width: 111px;
+}
+
+/* Selling Section CSS End  */
+
+/* Footer Css @S */
+.footer {
+  background-color: #f8f9fa;
+}
+
+.footer a {
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.footer a:hover {
+  color: var(--secondary-color);
+}
+
+.footer_inner {
+  padding: 125px 0 40px;
+}
+
+.footer_logo img {
+  height: 73px;
+  margin-bottom: 120px;
+}
+
+.footer_social a {
+  width: 48px;
+  height: 48px;
+}
+
+.footer_social a:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.footer_title {
+  font-size: 24px;
+  font-family: var(--secondary-font);
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.footer_menu li:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.footer_copyRight {
+  border-top: 1px solid #d6d6d6;
+  padding: 40px 0;
+  font-size: 16px;
+}
+
+.footer_copyRight p {
+  font-size: 15px;
+}
+
+/* Footer Css @E */

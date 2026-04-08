@@ -1,0 +1,23 @@
+<div class="faq-container">
+    <h1>Frequently Asked Questions</h1>
+
+    <div class="onboarding-image-wrapper">
+        <!-- Desktop Image -->
+        <img src="assets/faq/FAQ_03.svg" alt="Onboarding Overview Desktop"
+            class="onboarding-image desktop-img" />
+
+        <!-- Mobile Images -->
+        <div class="mobile-img-wrapper">
+            <img src="assets/faq/FAQ_01.svg" alt="Onboarding Mobile 1" class="onboarding-image" />
+            <img src="assets/faq/FAQ_02.svg" alt="Onboarding Mobile 2" class="onboarding-image" />
+        </div>
+    </div>
+
+    <div *ngFor="let faq of faqs; let i = index" class="faq-item" [class.expanded]="faq.expanded">
+        <div class="faq-question" (click)="toggleFAQ(i)">
+            <h2>{{ faq.question }}</h2>
+            <span class="toggle-icon">{{ faq.expanded ? '-' : '+' }}</span>
+        </div>
+        <p *ngIf="faq.expanded" class="faq-answer" [innerHTML]="faq.answer"></p>
+    </div>
+</div>
