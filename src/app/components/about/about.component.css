@@ -1,0 +1,422 @@
+/* About Page Styles */
+.about-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 30px 20px;
+  background: linear-gradient(to bottom, #ffffff, #e0c8f5);
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  text-align: left;
+  margin: 80px auto 0;
+  /* Accounts for navbar */
+}
+
+.about-container h1 {
+  color: #7e2ac7;
+  text-align: center;
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  margin-bottom: 20px;
+}
+
+.about-container h2 {
+  color: #5e1c9c;
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.about-container p {
+  font-size: clamp(1rem, 1.8vw, 1.1rem);
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.about-container ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.about-container ul li {
+  font-size: clamp(1rem, 1.8vw, 1.1rem);
+  margin-bottom: 8px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* UPDATED: Image Styles for First Image (aboutus_02.svg) - Similar to Discover Page */
+.onboarding-image-wrapper {
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+.onboarding-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Default: Show desktop image, hide mobile set */
+.desktop-img {
+  display: block;
+}
+
+.mobile-img-wrapper {
+  display: none;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+/* UPDATED: Mobile-only image styles for aboutus_03.svg */
+.mobile-only-image-wrapper {
+  width: 100%;
+  margin: 1.5rem 0;
+  display: none; /* Hidden on desktop by default */
+  justify-content: center;
+  background: transparent;
+  padding: 0;
+}
+
+.mobile-only-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: none;
+  background: transparent;
+  border: none;
+}
+
+/* For tablets: Adjust image size */
+@media (max-width: 1024px) {
+  .onboarding-image-wrapper {
+    margin: 1.5rem 0;
+  }
+
+  .onboarding-image {
+    width: 100%;
+  }
+  
+  /* Keep mobile-only image hidden on tablets */
+  .mobile-only-image-wrapper {
+    display: none;
+  }
+}
+
+/* For mobile: Hide desktop, show mobile stacked */
+@media (max-width: 767px) {
+  .desktop-img {
+    display: none;
+  }
+
+  .mobile-img-wrapper {
+    display: flex;
+  }
+
+  /* UPDATED: Show mobile-only image ONLY on mobile devices */
+  .mobile-only-image-wrapper {
+    display: flex;
+    width: 100%;
+    margin: 1.5rem 0;
+  }
+
+  .mobile-only-image {
+    width: 100%;
+  }
+
+  .onboarding-image-wrapper {
+    width: 100%;
+    margin: 1.5rem 0;
+  }
+
+  .onboarding-image {
+    width: 100%;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 20px 15px;
+    margin: 70px 10px 0;
+    border-radius: 8px;
+  }
+
+  .about-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-container h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* For very small mobile screens */
+@media (max-width: 480px) {
+  .about-container {
+    padding: 15px 8px;
+    margin: 70px 5px 0;
+  }
+
+  .about-container h1 {
+    font-size: 1.6rem;
+  }
+
+  .about-container ul {
+    padding-left: 15px;
+  }
+
+  .onboarding-image-wrapper,
+  .mobile-only-image-wrapper {
+    width: 100%;
+    margin: 1.5rem 0;
+    padding: 0;
+  }
+
+  .onboarding-image,
+  .mobile-only-image {
+    width: 100%;
+  }
+}
+
+/* For extremely small screens */
+@media (max-width: 360px) {
+  .about-container {
+    padding: 10px 5px;
+    margin: 70px 3px 0;
+  }
+
+  .onboarding-image-wrapper,
+  .mobile-only-image-wrapper {
+    width: 100%;
+    margin: 1.5rem 0;
+  }
+
+  .onboarding-image,
+  .mobile-only-image {
+    width: 100%;
+  }
+}
+
+/* Team Section Styles */
+.team-section {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+  margin-top: 40px;
+}
+
+.team-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+/* Updated Team Member Card Styles */
+.team-member {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 30px 30px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.6s ease;
+  max-width: 350px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect with purple gradient background */
+.team-member:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 15px 35px rgba(126, 42, 199, 0.2);
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  color: white;
+}
+
+/* Member Avatar Styles */
+.member-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 25px;
+  background: linear-gradient(135deg, #e5e7eb, #f3f4f6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 4px solid #f1f5f9;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.team-member:hover .member-avatar {
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.03);
+}
+
+.member-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Member Info Styles */
+.member-info {
+  margin-bottom: 25px;
+}
+
+.member-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 8px;
+  letter-spacing: -0.025em;
+  transition: color 0.5s ease;
+}
+
+.team-member:hover .member-name {
+  color: white;
+}
+
+.member-role {
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  transition: color 0.5s ease;
+}
+
+.team-member:hover .member-role {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.member-company {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  line-height: 1.4;
+  transition: color 0.5s ease;
+  font-style: italic;
+}
+
+.team-member:hover .member-company {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Social Links Styles */
+.member-social {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  font-size: 16px;
+  border: 1px solid #e2e8f0;
+}
+
+.social-link:hover {
+  background: #e2e8f0;
+  color: #475569;
+  transform: translateY(-2px);
+}
+
+/* Hover effect for social links on card hover */
+.team-member:hover .social-link {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.team-member:hover .social-link:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Hidden members class for JavaScript functionality */
+.hidden-member {
+  display: none;
+}
+
+/* See More Button Styles */
+.see-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.see-more-btn {
+  background: linear-gradient(135deg, #7e2ac7, #5e1c9c);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(126, 42, 199, 0.3);
+}
+
+.see-more-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(126, 42, 199, 0.4);
+  background: linear-gradient(135deg, #8a2fd1, #6a1fb0);
+}
+
+.see-more-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(126, 42, 199, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .team-section {
+    padding: 40px 15px;
+  }
+
+  .team-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .team-member {
+    padding: 20px;
+  }
+}

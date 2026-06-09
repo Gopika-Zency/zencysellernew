@@ -1,0 +1,112 @@
+/* Ensure full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* FAQ Section Styling */
+.faq-container {
+    width: 100%;
+    padding: 30px;
+    background: linear-gradient(to bottom, #ffffff, #e0c8f5); /* Matching other sections */
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    text-align: left;
+    margin-top: 70px;
+}
+
+/* Heading */
+.faq-container h1 {
+    color: #7e2ac7;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Individual FAQ Item */
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+/* Question Section */
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-question h2 {
+    color: #5e1c9c;
+    font-size: 22px;
+    margin: 0;
+}
+
+/* Toggle Icon */
+.toggle-icon {
+    font-size: 22px;
+    font-weight: bold;
+    color: #5e1c9c;
+}
+
+/* Answer Section */
+.faq-answer {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 10px;
+    display: none;
+}
+
+/* Expand Answer */
+.faq-item.expanded .faq-answer {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faq-container {
+        width: 95%;
+        padding: 20px;
+        margin: 10px;
+        margin-top: 74px;
+    }
+}
+
+
+  .onboarding-image-wrapper {
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+.onboarding-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Default: Show desktop image, hide mobile set */
+.desktop-img {
+  display: block;
+}
+
+.mobile-img-wrapper {
+  display: none;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+/* For mobile: Hide desktop, show mobile stacked */
+@media (max-width: 767px) {
+  .desktop-img {
+    display: none;
+  }
+
+  .mobile-img-wrapper {
+    display: flex;
+  }
+}

@@ -1,0 +1,162 @@
+/* Base adjustments for banner section */
+.bannerSec {
+  padding: 120px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bannerSec_top_title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.line-1,
+.line-2 {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  white-space: normal;
+}
+
+.logo-inline {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  padding-left: 40px;
+  height: 60px;
+}
+
+.logo-main {
+  height: 80px;
+  object-fit: contain;
+}
+
+.logo-bg-circle {
+  position: absolute;
+  top: -30px;
+  left: -5px;
+  width: 120%;
+  z-index: -1;
+}
+
+.exclamation {
+  font-size: 64px;
+  font-weight: 700;
+  margin-left: 5px;
+  line-height: 1;
+}
+
+/* Button Styling */
+.bannerSec .btn-black {
+  display: inline-block;
+  background: #9077ff;
+  color: #fff;
+  border-radius: 30px;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.bannerSec .btn-black:hover {
+  background: #a08feb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(126, 42, 199, 0.2);
+}
+
+/* Dot image */
+.bannerSec_dots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 160px;
+  opacity: 0.5;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Banner bottom items */
+.bannerSec_bottom {
+  padding-top: 60px;
+}
+
+.bannerSec_bottom_title {
+  font-size: 20px;
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+/* ========== MOBILE RESPONSIVE ========== */
+@media (max-width: 992px) {
+  .bannerSec {
+    padding: 100px 0 60px;
+  }
+
+  .bannerSec_top_title {
+    font-size: 34px;
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+
+  .line-1,
+  .line-2 {
+    justify-content: center;
+    flex-wrap: wrap;
+    white-space: normal;
+    gap: 6px;
+  }
+
+  .logo-inline {
+    height: 45px;
+    padding-left: 25px;
+  }
+
+  .logo-main {
+    height: 50px;
+  }
+
+  .logo-bg-circle {
+    top: -5px;
+    width: 100%;
+    padding-left: 5px;
+  }
+
+  .exclamation {
+    font-size: 34px;
+    line-height: 1;
+    margin-left: 4px;
+  }
+
+  .bannerSec_desc {
+    font-size: 18px;
+    text-align: center;
+    margin: 16px 0 24px;
+    line-height: 1.5;
+  }
+
+  .bannerSec .btn-black {
+    display: block;
+    width: 60%;
+    max-width: 280px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 50px;
+  }
+
+  .bannerSec_img {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .bannerSec_bottom .col-lg-3 {
+    margin-bottom: 30px;
+  }
+}
